@@ -4,6 +4,7 @@ using Fusion.Sockets;
 using System.Collections.Generic;
 using System;
 using UnityEngine.UI;
+using System.Linq;
 
 
 
@@ -28,6 +29,8 @@ public class FusionManager : MonoBehaviour,INetworkRunnerCallbacks
 
     [SerializeField] GameObject camera1;
     [SerializeField] GameObject camera2;
+
+    [SerializeField] public GameObject[] spawnLocations;
 
     private void Awake()
     {
@@ -84,7 +87,7 @@ public class FusionManager : MonoBehaviour,INetworkRunnerCallbacks
         {
             GameMode = GameMode.Shared,
             SessionName = randomSessionName,
-            PlayerCount = 2,
+            PlayerCount = 4,
             //SceneManager=gameObject.AddComponent<NetworkSceneManagerDefault>()
         });
     }
@@ -128,9 +131,15 @@ public class FusionManager : MonoBehaviour,INetworkRunnerCallbacks
 
     public void OnConnectedToServer(NetworkRunner runner)
     {
-        Debug.Log("OnConnectedToServer");
-        NetworkObject playerObject = runner.Spawn(playerPrefab, Vector3.zero);
+        int random = UnityEngine.Random.Range(0, spawnLocations.Length-1);
+        GameObject spawn = spawnLocations[random];
+        Vector3 getLocation = spawn.transform.position;
+
+        NetworkObject playerObject = runner.Spawn(playerPrefab, getLocation);
         runner.SetPlayerObject(runner.LocalPlayer, playerObject);
+        Debug.Log("On Connected To Server");
+
+        //spawnLocations = spawnLocations.Where(val => val != spawn).ToArray();
     }
 
     public void OnConnectFailed(NetworkRunner runner, NetAddress remoteAddress, NetConnectFailedReason reason)
