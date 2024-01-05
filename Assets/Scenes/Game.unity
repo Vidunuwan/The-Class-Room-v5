@@ -8480,7 +8480,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6103970338478074604, guid: 1528945355481cd44bccb21de237c7ef, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 65.82397
+      value: 65.213776
       objectReference: {fileID: 0}
     - target: {fileID: 6103970338478074604, guid: 1528945355481cd44bccb21de237c7ef, type: 3}
       propertyPath: m_LocalPosition.y
@@ -12320,7 +12320,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 722b716421a838b4d800c02a80304247, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  connecOnAwake: 1
+  connecOnAwake: 0
   runner: {fileID: 0}
   playerPrefab: {fileID: 1592269743958653202, guid: d65ec881021467d49a16916a8b7ecaa8, type: 3}
   _playername: 
@@ -13316,7 +13316,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   m_LocalRotation: {x: 0.32326594, y: 0, z: 0, w: 0.94630814}
-  m_LocalPosition: {x: 65.55117, y: 8.228326, z: 7.308442}
+  m_LocalPosition: {x: 64.84725, y: 8.228326, z: 7.308442}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -27648,7 +27648,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9216211701829971563, guid: 73475590892ef61408ba77850253c7f9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 65.55117
+      value: 64.84725
       objectReference: {fileID: 0}
     - target: {fileID: 9216211701829971563, guid: 73475590892ef61408ba77850253c7f9, type: 3}
       propertyPath: m_LocalPosition.y

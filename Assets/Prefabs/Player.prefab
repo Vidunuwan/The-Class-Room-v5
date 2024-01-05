@@ -137,7 +137,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b934f687aebdce74883ca65e552e2e60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerSpeed: 2
+  playerRunSpeed: 5
+  playerWalkSpeed: 2
   jumpHeight: 1
   gravityValue: -9.81
   rotationSpeed: 8
@@ -206,10 +207,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Animator: {fileID: 1820597415740584773}
-  TotalWords: 2
+  TotalWords: 3
   ApplyTiming: 2
   SyncSettings: 79
-  StateHashes: 000000006bd5a32d398fdc041589333ab0cdd485
+  StateHashes: 000000006bd5a32d398fdc041589333ab0cdd48520e23b685928a8ce
   TriggerHashes: 00000000
 --- !u!1 &1820597415928491567
 GameObject:
